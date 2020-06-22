@@ -33,7 +33,15 @@ const AddTrain = ({ setTrains }) => {
                 station2: true
             });
             return false;
-        } 
+        }
+
+        if (station1 === station2) {
+            setErrors({
+                station1: true,
+                station2: true
+            });
+            return false;
+        }
         
         if (!(price && Number(price) >= 0)) {
             setErrors({

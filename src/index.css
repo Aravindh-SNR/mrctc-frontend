@@ -118,3 +118,14 @@ code {
 p.train-name {
   font-weight: bold;
 }
+
+#add-train-form {
+  width: 90%;
+  margin: 3% auto 0;
+}
+
+@media (max-width: 700px) {
+  #add-train-form {
+    margin-bottom: 5%;
+  }
+}

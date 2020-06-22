@@ -5,6 +5,7 @@ import { Loader, Message, Header } from 'semantic-ui-react';
 import { UserContext } from '../contexts/UserContext';
 import AddPassengers from './AddPassengers';
 import UpdatePrice from './UpdatePrice';
+import AddTrain from './AddTrain';
 
 // Display list of trains
 
@@ -65,6 +66,13 @@ const Trains = () => {
                         trains.length > 0
                             ? (
                                 <>
+                                    {
+                                        (user && user.userType === 'admin') &&
+                                        <AddTrain
+                                            setTrains={setTrains}
+                                        />
+                                    }
+
                                     {getHeader()}
 
                                     <UpdatePrice

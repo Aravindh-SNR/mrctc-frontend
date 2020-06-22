@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Form, Header, Input, Select, Button, Table, Message } from 'semantic-ui-react';
 import { useHistory } from 'react-router-dom';
 import ticketService from '../services/tickets';
+import Concessions from './Concessions';
 
 const options = [
     { key: 'm', text: 'Male', value: 'M' },
@@ -178,6 +179,8 @@ const AddPassengers = ({ selectedTrain, openCustomerModal, setOpenCustomerModal 
                         content={serverMessage}
                     />
                 }
+
+                <Concessions />
             </Modal.Content>
 
             <Modal.Actions>

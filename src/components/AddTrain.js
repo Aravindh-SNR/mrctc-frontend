@@ -35,7 +35,7 @@ const AddTrain = ({ setTrains }) => {
             return false;
         }
 
-        if (station1 === station2) {
+        if (station1.toLowerCase() === station2.toLowerCase()) {
             setErrors({
                 station1: true,
                 station2: true

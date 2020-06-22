@@ -70,7 +70,8 @@ const Booking = ({ booking, setBookings }) => {
                     : (
                         <>
                             <p>
-                                Total amount to be paid after deducting concessions, if any: {booking.totalAmount}
+                                Total amount to be paid after deducting concessions applicable:&nbsp;
+                                <Icon name='rupee' size='small' />{booking.totalAmount}
                             </p>
 
                             <Button

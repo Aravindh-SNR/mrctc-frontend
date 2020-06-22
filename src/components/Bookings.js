@@ -34,6 +34,7 @@ const Bookings = () => {
                                             <Booking
                                                 key={booking.id}
                                                 booking={booking}
+                                                setBookings={setBookings}
                                             />
                                         ))
                                     }

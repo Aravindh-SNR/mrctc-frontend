@@ -2,16 +2,21 @@ import React, { useState } from 'react';
 import { Segment, Header, Table, Button, Icon } from 'semantic-ui-react';
 import ticketService from '../services/tickets';
 
-const Booking = ({ booking }) => {
+const Booking = ({ booking, setBookings }) => {
     const [buyLoading, setBuyLoading] = useState(false);
     const [cancelLoading, setCancelLoading] = useState(false);
 
     const buyTicket = () => {
         setBuyLoading(true);
         ticketService.buyTicket(booking.id)
-            .then(() => {
+            .then(response => {
                 setBuyLoading(false);
-                window.location = '/bookings';
+                setBookings(bookings => bookings.map(booking => {
+                    if (booking.id === response.id) {
+                        return response;
+                    }
+                    return booking;
+                }))
             })
             .catch(() => {
                 setBuyLoading(false);
@@ -20,10 +25,11 @@ const Booking = ({ booking }) => {
 
     const cancelTicket = () => {
         setCancelLoading(true);
+        const cancelledBookingId = booking.id;
         ticketService.cancelTicket(booking.id)
             .then(() => {
                 setCancelLoading(false);
-                window.location = '/bookings';
+                setBookings(bookings => bookings.filter(booking => booking.id !== cancelledBookingId));
             })
             .catch(() => {
                 setCancelLoading(false);

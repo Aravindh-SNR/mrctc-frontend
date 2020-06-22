@@ -77,6 +77,7 @@ const Trains = () => {
 
                                     <UpdatePrice
                                         selectedTrain={selectedTrain}
+                                        setTrains={setTrains}
                                         openAdminModal={openAdminModal}
                                         setOpenAdminModal={setOpenAdminModal}
                                     />

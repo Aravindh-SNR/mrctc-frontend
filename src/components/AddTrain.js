@@ -97,7 +97,7 @@ const AddTrain = ({ setTrains }) => {
                         autoComplete='off'
                         value={station1}
                         label='Station 1'
-                        placeholder='Enter Station 2'
+                        placeholder='Enter Station 1'
                         onChange={({ target }) => setStation1(target.value)}
                         error={errors.station1}
                         required
@@ -107,7 +107,7 @@ const AddTrain = ({ setTrains }) => {
                         autoComplete='off'
                         value={station2}
                         label='Station 2'
-                        placeholder='Enter Station 1'
+                        placeholder='Enter Station 2'
                         onChange={({ target }) => setStation2(target.value)}
                         error={errors.station2}
                         required

@@ -4,7 +4,7 @@ import trainService from '../services/trains';
 
 // Display modal with form for updating price of train ticket
 
-const UpdatePrice = ({ selectedTrain, openAdminModal, setOpenAdminModal }) => {
+const UpdatePrice = ({ selectedTrain, setTrains, openAdminModal, setOpenAdminModal }) => {
     const [price, setPrice] = useState('');
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -35,9 +35,15 @@ const UpdatePrice = ({ selectedTrain, openAdminModal, setOpenAdminModal }) => {
         setServerMessage('');
         setLoading(true);
         trainService.updatePrice(selectedTrain.id, price)
-            .then(() => {
+            .then(response => {
                 setLoading(false);
-                window.location = '/trains';
+                setTrains(trains => trains.map(train => {
+                    if (train.id === response.id) {
+                        return response;
+                    }
+                    return train;
+                }));
+                setOpenAdminModal(false);
             })
             .catch(() => {
                 setLoading(false);

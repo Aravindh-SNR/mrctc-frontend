@@ -11,3 +11,110 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#navbar {
+  padding: 0 5%;
+}
+
+#app-heading {
+  display: flex;
+  align-items: center;
+}
+
+#app-heading span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3%;
+}
+
+#user-form {
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  #home-container {
+    grid-template-columns: 1fr;
+    gap: 5%;
+    padding-bottom: 10%;
+  }
+}
+
+#banner {
+  text-align: center;
+}
+
+#banner img {
+  margin: 0 auto;
+}
+
+#not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3% 0;
+}
+
+.train-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 2% 5% 5%;
+  gap: 20px;
+}
+
+.train-item {
+  border: 1px solid;
+  padding: 20px;
+  background: rgba(0, 0, 255, 0.1);
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.train-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.25s;
+}
+
+.train-item div {
+  font-size: 1.1rem;
+}
+
+.train-item div:last-child {
+  font-size: 1.1rem;
+  margin-top: 3%;
+}
+
+.train-name {
+  text-transform: capitalize;
+}
+
+.no-data {
+  display: flex;
+  justify-content: center;
+  margin: 3%;
+}
+
+#call-to-action-message {
+  margin-top: 2%;
+}
+
+.bookings-list {
+  width: 50%;
+  margin: 3% auto;
+}
+
+@media (max-width: 900px) {
+  .bookings-list {
+    width: 75%;
+  }
+}
+
+p.train-name {
+  font-weight: bold;
+}

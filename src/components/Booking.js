@@ -62,25 +62,29 @@ const Booking = ({ booking, setBookings }) => {
             {
                 booking.paid
                     ? (
-                        <>
-                            <p>
-                                Total Amount paid after deducting concessions, if any:&nbsp;
-                                <Icon name='rupee' size='small' />{booking.totalAmount}
-                            </p>
-                        </>
+                        <p>
+                            Paid:&nbsp;
+                            <Icon name='rupee' size='small' />{booking.totalAmount}
+                        </p>
                     )
                     : (
-                        <Button
-                            primary
-                            content='Buy Ticket'
-                            loading={buyLoading}
-                            onClick={buyTicket}
-                        />
+                        <>
+                            <p>
+                                Total amount to be paid after deducting concessions, if any: {booking.totalAmount}
+                            </p>
+
+                            <Button
+                                primary
+                                content='Buy Ticket'
+                                loading={buyLoading}
+                                onClick={buyTicket}
+                            />
+                        </>
                     )
             }
 
             <Button
-                content='Cancel Ticket'
+                content={booking.paid ? 'Cancel Ticket' : 'Discard Ticket'}
                 loading={cancelLoading}
                 onClick={cancelTicket}
             />

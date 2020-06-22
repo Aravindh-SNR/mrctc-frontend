@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseUrl = '/api/tickets';
+const baseUrl = `${process.env.REACT_APP_BACKEND_SERVER}/api/tickets`;
 
 const getBookingHistory = async () => {
     const response = await axios.get(baseUrl);

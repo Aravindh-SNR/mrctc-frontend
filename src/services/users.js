@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseUrl = '/api/users';
+const baseUrl = `${process.env.REACT_APP_BACKEND_SERVER}/api/users`;
 
 const register = async request => {
     const response = await axios.post(`${baseUrl}/register`, request);

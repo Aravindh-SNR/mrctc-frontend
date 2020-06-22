@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseUrl = '/api/trains';
+const baseUrl = `${process.env.REACT_APP_BACKEND_SERVER}/api/trains`;
 
 const getTrains = async () => {
     const response = await axios.get(baseUrl);

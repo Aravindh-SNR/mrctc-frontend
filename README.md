@@ -1,4 +1,4 @@
-Front end of MRCTC - a (dummy) subset of IRCTC for Metropolitan cities of India, built using React.
+Front end of MRCTC - a dummy rail e-ticketing app for Metropolitan cities of India, built using React.
 
 Check out the live app at https://mrctc.netlify.app/
 

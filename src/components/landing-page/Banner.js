@@ -8,7 +8,7 @@ const Banner = () => {
     return (
         <div id='banner'>
             <Header>
-                A subset of IRCTC for Metropolitan cities of India
+                A dummy rail e-ticketing app for Metropolitan cities of India
             </Header>
 
             <Image src={train} alt='Train' size='big' rounded />

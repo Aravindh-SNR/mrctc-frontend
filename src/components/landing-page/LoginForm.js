@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Form, Button, Message } from 'semantic-ui-react';
-import userService from '../services/users';
-import { UserContext } from '../contexts/UserContext';
+import userService from '../../services/users';
+import { UserContext } from '../../contexts/UserContext';
 
 const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 

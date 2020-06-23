@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Menu, Icon } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
 import userService from '../services/users';
 
@@ -8,6 +8,15 @@ import userService from '../services/users';
 
 const Navbar = () => {
     const { user, setUser } = useContext(UserContext);
+
+    const [activeMenu, setActiveMenu] = useState('');
+
+    const location = useLocation();
+
+    // Update active menu every time route changes
+    useEffect(() => {
+        setActiveMenu(location.pathname.slice(1));
+    }, [location]);
 
     const logout = () => {
         userService.logout();
@@ -28,6 +37,7 @@ const Navbar = () => {
                 position='right'
                 as={Link}
                 to='/trains'
+                className={activeMenu === 'trains' ? 'active-menu' : ''}
             >
                 Browse Trains
             </Menu.Item>
@@ -40,6 +50,7 @@ const Navbar = () => {
                     position='right'
                     as={Link}
                     to='/bookings'
+                    className={activeMenu === 'bookings' ? 'active-menu' : ''}
                 >
                     My Bookings
                 </Menu.Item>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Checkbox, Message } from 'semantic-ui-react';
-import userService from '../services/users';
+import userService from '../../services/users';
 
 const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -66,7 +66,7 @@ const RegistrationForm = () => {
                 response.id && setServerMessage({
                     success: true,
                     header: `Welcome, ${response.name}!`,
-                    content: 'Please log in now with your email and password.'
+                    content: 'You are registered. Please log in now with your email and password.'
                 });
             })
             .catch(error => {

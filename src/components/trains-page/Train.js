@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Icon } from 'semantic-ui-react';
-import { UserContext } from '../contexts/UserContext';
+import { UserContext } from '../../contexts/UserContext';
 
 // Display one train card
 

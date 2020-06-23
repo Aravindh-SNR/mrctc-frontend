@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Message, Button } from 'semantic-ui-react';
-import trainService from '../services/trains';
+import trainService from '../../services/trains';
+
+// Form for admin to add a train
 
 const AddTrain = ({ setTrains }) => {
     const [name, setName] = useState('');
@@ -43,7 +45,7 @@ const AddTrain = ({ setTrains }) => {
             return false;
         }
         
-        if (!(price && Number(price) >= 0)) {
+        if (!(price && Number(price) > 0)) {
             setErrors({
                 price: true
             });

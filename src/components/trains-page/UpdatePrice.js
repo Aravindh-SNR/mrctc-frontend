@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Form, Button, Message, Header } from 'semantic-ui-react';
-import trainService from '../services/trains';
+import trainService from '../../services/trains';
 
 // Display modal with form for updating price of train ticket
 
@@ -86,6 +86,7 @@ const UpdatePrice = ({ selectedTrain, setTrains, openAdminModal, setOpenAdminMod
                 <Button
                     onClick={closeModal}
                     content='Cancel'
+                    type='button'
                 />
 
                 <Button

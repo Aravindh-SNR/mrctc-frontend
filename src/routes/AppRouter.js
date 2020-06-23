@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import Navbar from '../components/Navbar';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import Home from '../components/Home';
+import Home from '../components/landing-page/Home';
 import { UserContext } from '../contexts/UserContext';
 import NotFound from '../components/NotFound';
-import Trains from '../components/Trains';
-import Bookings from '../components/Bookings';
+import Trains from '../components/trains-page/Trains';
+import Bookings from '../components/bookings-page/Bookings';
 
 // Routing component
 

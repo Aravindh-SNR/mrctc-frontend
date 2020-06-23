@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Segment, Header, Table, Button, Icon } from 'semantic-ui-react';
-import ticketService from '../services/tickets';
+import ticketService from '../../services/tickets';
+
+// Display details of one booking
 
 const Booking = ({ booking, setBookings }) => {
     const [buyLoading, setBuyLoading] = useState(false);
@@ -46,6 +48,14 @@ const Booking = ({ booking, setBookings }) => {
 
             <p>Passengers:</p>
             <Table>
+                <Table.Header>
+                    <Table.Row>
+                        <Table.HeaderCell>Name</Table.HeaderCell>
+                        <Table.HeaderCell>Age</Table.HeaderCell>
+                        <Table.HeaderCell>Gender</Table.HeaderCell>
+                    </Table.Row>
+                </Table.Header>
+
                 <Table.Body>
                     {
                         booking.passengers.map(passenger => (

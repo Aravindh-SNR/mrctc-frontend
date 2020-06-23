@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import ticketService from '../services/tickets';
+import ticketService from '../../services/tickets';
 import { Loader, Message } from 'semantic-ui-react';
 import Booking from './Booking';
+
+// Display list of bookings made by user
 
 const Bookings = () => {
     const [bookings, setBookings] = useState([]);
@@ -42,7 +44,7 @@ const Bookings = () => {
                             )
                             : (
                                 <div className='no-data'>
-                                    <Message info content='Sorry, no data found.' compact />
+                                    <Message info content='No bookings found.' compact />
                                 </div>
                             )
                     )

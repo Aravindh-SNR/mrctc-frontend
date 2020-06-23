@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Form, Header, Input, Select, Button, Table, Message } from 'semantic-ui-react';
 import { useHistory } from 'react-router-dom';
-import ticketService from '../services/tickets';
+import ticketService from '../../services/tickets';
 import Concessions from './Concessions';
 
 const options = [
@@ -187,6 +187,7 @@ const AddPassengers = ({ selectedTrain, openCustomerModal, setOpenCustomerModal 
                 <Button
                     onClick={closeModal}
                     content='Cancel'
+                    type='button'
                 />
 
                 <Button

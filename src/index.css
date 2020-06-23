@@ -109,14 +109,21 @@ code {
   margin: 3% auto;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .bookings-list {
     width: 75%;
   }
 }
 
+@media (max-width: 600px) {
+  .bookings-list {
+    width: 90%;
+  }
+}
+
 p.train-name {
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
 #add-train-form {
@@ -126,6 +133,10 @@ p.train-name {
 
 @media (max-width: 700px) {
   #add-train-form {
-    margin-bottom: 5%;
+    margin-bottom: 7%;
   }
+}
+
+#navbar .active-menu {
+  color: #2185D0;
 }

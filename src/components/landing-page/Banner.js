@@ -1,5 +1,5 @@
 import React from 'react';
-import train from '../images/train.jpg';
+import train from '../../images/train.jpg';
 import { Image, Header } from 'semantic-ui-react';
 
 // Component for displaying banner heading and image on Home page

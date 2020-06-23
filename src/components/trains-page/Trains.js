@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
-import trainService from '../services/trains';
+import trainService from '../../services/trains';
 import Train from './Train';
 import { Loader, Message, Header } from 'semantic-ui-react';
-import { UserContext } from '../contexts/UserContext';
+import { UserContext } from '../../contexts/UserContext';
 import AddPassengers from './AddPassengers';
 import UpdatePrice from './UpdatePrice';
 import AddTrain from './AddTrain';

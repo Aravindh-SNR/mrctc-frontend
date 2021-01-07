@@ -42,15 +42,6 @@ const Home = () => {
                         : <RegistrationForm />
                 }
             </div>
-        
-        
-            <div className="radius-payment">
-                <script src="https://getwyse.co/api/v1/payment/public/script/5fa164fb4a51e8cfe9d16798"></script>
-                <a href="https://test.d2l73345k57zd1.amplifyapp.com/@aravindh-academy/5fa164fb4a51e8cfe9d16798" target="radius-payment-frame" style="display: none;" className="radius-payment-btn btn btn-primary font-12">
-                    Pay Now
-                </a>
-            </div>
-    
         </div>
     );
 };
